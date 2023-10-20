@@ -1,0 +1,64 @@
+# SERVER
+server:
+  port: 8080
+  ssl:
+    enabled: false
+  error:
+    whitelabel.enabled: false
+  servlet:
+    context-path: /
+
+#SPRING
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: ${POSTGRES_URL}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 3
+      connection-timeout: 60000
+      leak-detection-threshold: 0
+  jpa:
+    hibernate:
+      ddl-auto: validate
+      use-new-id-generator-mappings: false
+    open-in-view: false
+    properties:
+      hibernate.dialect: org.hibernate.dialect.PostgreSQL10Dialect
+  jackson:
+    default-property-inclusion: non_null
+    serialization:
+      indent-output: true
+  web:
+    resources.add-mappings: false
+  mvc:
+    throw-exception-if-no-handler-found: true
+    servlet:
+      load-on-startup: 1
+
+# ACTUATOR
+management:
+  endpoints:
+    enabled-by-default: false
+    web:
+      exposure.include: health
+  endpoint:
+    health:
+      enabled: true
+
+# SWAGGER
+springdoc:
+  api-docs:
+    path: /api/docs
+  swagger-ui:
+    path: /api/swagger
+
+# LOGGING
+logging:
+  level:
+    root: info
+    org.apache.commons: error
+    org.springframework.data: error
+    dev.challenge.filter.RequestLoggingFilter: debug

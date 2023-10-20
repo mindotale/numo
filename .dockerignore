@@ -1,0 +1,15 @@
+backend/Dockerfile
+.dockerignore
+data/.env
+.git
+.gitignore
+.gradle
+.project
+.settings
+.toolstarget
+.vs
+.vscode
+.idea
+build
+docker-compose.yml
+README.md

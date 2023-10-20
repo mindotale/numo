@@ -1,0 +1,52 @@
+version: "3.7"
+
+services:
+  postgres:
+    image: 'postgres:10.5-alpine'
+    container_name: postgres
+    env_file:
+      - data/.env
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+    networks:
+      - dev_challenge
+    ports:
+      - "5433:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U numo"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 3s
+
+  backend:
+    build:
+      context: ./backend
+    container_name: backend
+    depends_on:
+      postgres:
+        condition: service_healthy
+    env_file:
+      - data/.env
+    environment:
+      - POSTGRES_URL=jdbc:postgresql://postgres:5432/numo
+    healthcheck:
+      test: wget -qO - http://localhost:8080/actuator/health | grep UP || exit 1
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 3s
+    networks:
+      - dev_challenge
+    ports:
+      - "8080:8080"
+
+  test:
+    build:
+      context: .
+    container_name: test
+    entrypoint: gradle test jacocoLogTestCoverage
+    profiles: ["test"]
+
+networks:
+  dev_challenge:

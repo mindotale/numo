@@ -39,14 +39,14 @@
 ### Group
 ```javascript
 {
-    "id": "",
-    "name": "",
+    "id": "00000000-0000-0000-0000-000000000000",
+    "name": "string",
     "count":  0,
     "properties": [
         {
-            "name": "",
-            "operator": ""
-            "value": ""
+            "name": "string",
+            "operator": "string"
+            "value": "string"
         },
     ]
 }
@@ -70,14 +70,14 @@
     "limit": 0,
     "groups": [
         {
-            "id": "",
-            "name": "",
+            "id": "00000000-0000-0000-0000-000000000000",
+            "name": "string",
             "count":  0,
             "properties": [
                 {
-                    "name": "",
-                    "operator": ""
-                    "value": ""
+                    "name": "string",
+                    "operator": "string"
+                    "value": "string"
                 },
             ]
         }
@@ -92,14 +92,14 @@
 **Response**
 ```javascript
 {
-    "id": "",
-    "name": "",
+    "id": "00000000-0000-0000-0000-000000000000",
+    "name": "string",
     "count":  0,
     "properties": [
         {
-            "name": "",
-            "operator": ""
-            "value": ""
+            "name": "string",
+            "operator": "string"
+            "value": "string"
         },
     ]
 }
@@ -112,12 +112,12 @@
 **Request**
 ```javascript
 {
-    "name": "",
+    "name": "string",
     "properties": [
         {
-            "name": "",
-            "operator": "",
-            "value": ""
+            "name": "string",
+            "operator": "string",
+            "value": "string"
         },
     ]
 }
@@ -126,14 +126,14 @@
 **Response**
 ```javascript
 {
-    "id": "",
-    "name": "",
+    "id": "00000000-0000-0000-0000-000000000000",
+    "name": "string",
     "count":  0,
     "properties": [
         {
-            "name": "",
-            "operator": "",
-            "value": ""
+            "name": "string",
+            "operator": "string",
+            "value": "string"
         },
     ]
 }
@@ -146,12 +146,12 @@
 **Request**
 ```javascript
 {
-    "name": "",
+    "name": "string",
     "properties": [
         {
-            "name": "",
-            "operator": "",
-            "value": ""
+            "name": "string",
+            "operator": "string",
+            "value": "string"
         },
     ]
 }
@@ -160,14 +160,14 @@
 **Response**
 ```javascript
 {
-    "id": "",
-    "name": "",
+    "id": "00000000-0000-0000-0000-000000000000",
+    "name": "string",
     "count":  0,
     "properties": [
         {
-            "name": "",
-            "operator": "",
-            "value": ""
+            "name": "string",
+            "operator": "string",
+            "value": "string"
         }
     ]
 }
@@ -184,16 +184,16 @@
 **Response**
 ```javascript
 {
-    "id": "",
-    "parentId": "",
-    "name": "",
+    "id": "00000000-0000-0000-0000-000000000000",
+    "parentId": "00000000-0000-0000-0000-000000000000",
+    "name": "string",
     "age": 0
 }
 ```
 
 ### Get Group Children
 
-`GET` /groups/{group_id}/children
+`GET` /groups/{id}/children
 
 **Query**
 
@@ -208,9 +208,9 @@
     "groupId": 0,
     "children": [
         {
-            "id": "",
-            "parentId": "",
-            "name": "",
+            "id": "00000000-0000-0000-0000-000000000000",
+            "parentId": "00000000-0000-0000-0000-000000000000",
+            "name": "string",
             "age": 0
         }
     ],
@@ -224,15 +224,15 @@
 ### Parent
 ```javascript
 {
-    "id": "",
-    "name": "",
-    "location": "",
+    "id": "00000000-0000-0000-0000-000000000000",
+    "name": "string",
+    "location": "string, string",
     "childСount": 0,
-    "source": "",
+    "source": "string",
     "likeCount": 0,
     "dislikeCount": 0,
-    "registeredAt": "",
-    "lastActiveAt": ""
+    "registeredAt": "0000-00-00T00:00:00.000Z",
+    "lastActiveAt": "0000-00-00T00:00:00.000Z",
 }
 ```
 
@@ -243,15 +243,15 @@
 **Response**
 ```javascript
 {
-    "id": "",
-    "name": "",
-    "location": "",
+    "id": "00000000-0000-0000-0000-000000000000",
+    "name": "string",
+    "location": "string, string",
     "childСount": 0,
-    "source": "",
+    "source": "string",
     "likeCount": 0,
     "dislikeCount": 0,
-    "registeredAt": "",
-    "lastActiveAt": ""
+    "registeredAt": "0000-00-00T00:00:00.000Z",
+    "lastActiveAt": "0000-00-00T00:00:00.000Z",
 }
 ```
 
@@ -271,15 +271,15 @@
 {
     "parents": [
         {
-            "id": "",
-            "name": "",
-            "location": "",
+            "id": "00000000-0000-0000-0000-000000000000",
+            "name": "string",
+            "location": "string, string",
             "childСount": 0,
-            "source": "",
+            "source": "string",
             "likeCount": 0,
             "dislikeCount": 0,
-            "registeredAt": "",
-            "lastActiveAt": ""
+            "registeredAt": "0000-00-00T00:00:00.000Z",
+            "lastActiveAt": "0000-00-00T00:00:00.000Z",
         }
     ],
     "offset": 0,
@@ -301,7 +301,7 @@
 **Response**
 ```javascript
 {
-    "parentId": "",
+    "parentId": "00000000-0000-0000-0000-000000000000",
     "likes": [
         {
             "messageId": ""
@@ -326,7 +326,7 @@
 **Response**
 ```javascript
 {
-    "parentId": "",
+    "parentId": "00000000-0000-0000-0000-000000000000",
     "dislikes": [
         {
             "messageId": ""
@@ -347,9 +347,9 @@
 **Response**
 ```javascript
 {
-    "id": "",
-    "parentId": "",
-    "name": "",
+    "id": "00000000-0000-0000-0000-000000000000",
+    "parentId": "00000000-0000-0000-0000-000000000000",
+    "name": "string",
     "age": 0,
 }
 ```
@@ -370,9 +370,9 @@
 {
     "children": [
         {
-            "id": "",
-            "parentId": "",
-            "name": "",
+            "id": "00000000-0000-0000-0000-000000000000",
+            "parentId": "00000000-0000-0000-0000-000000000000",
+            "name": "string",
             "age": 0
         }
     ],
@@ -390,9 +390,9 @@
 **Response**
 ```javascript
 {
-    "id": "",
+    "id": "00000000-0000-0000-0000-000000000000",
     "groupId": "",
-    "name": "",
+    "name": "string",
     "content": "",
     "startDate": "",
     "repeatDays": 0
@@ -415,10 +415,10 @@
 {
     "messages": [
         {
-            "id": "",
+            "id": "00000000-0000-0000-0000-000000000000",
             "groupId": "",
             "content": "",
-            "name": "",
+            "name": "string",
             "startDate": "",
             "repeatDays": 0
         }
@@ -436,7 +436,7 @@
 ```javascript
 {
     "groupId": "",
-    "name": "",
+    "name": "string",
     "content": "",
     "startDate": "",
     "repeatDays": 0
@@ -446,9 +446,9 @@
 **Response**
 ```javascript
 {
-    "id": "",
+    "id": "00000000-0000-0000-0000-000000000000",
     "groupId": "",
-    "name": "",
+    "name": "string",
     "content": "",
     "startDate": "",
     "repeatDays": 0
@@ -463,7 +463,7 @@
 ```javascript
 {
     "groupId": "",
-    "name": "",
+    "name": "string",
     "content": "",
     "startDate": "",
     "repeatDays": 0
@@ -473,9 +473,9 @@
 **Response**
 ```javascript
 {
-    "id": "",
+    "id": "00000000-0000-0000-0000-000000000000",
     "groupId": "",
-    "name": "",
+    "name": "string",
     "content": "",
     "startDate": "",
     "repeatDays": 0

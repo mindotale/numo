@@ -1,0 +1,21 @@
+databaseChangeLog:
+  - changeSet:
+      id: 01_Initialize_database
+      author: Numo
+      changes:
+        - sql:
+            sql: |
+              INSERT INTO users (name, city, phone, birth_date, client_type, activity_type, last_activity_date, advice_frequency) VALUES
+              ('User1', 'City1', '1234567890', '1990-01-01', 'TELEGRAM', 'ACTIVE_USER', '2023-10-01', 'DAILY');
+              
+              INSERT INTO users (name, city, phone, birth_date, client_type, activity_type, last_activity_date, advice_frequency) VALUES
+              ('User2', 'City2', '9876543210', '1995-05-15', 'VIBER', 'UNSATISFIED_USER', '2023-09-15', 'WEEKLY');
+
+
+        - sql:
+            sql: |
+              INSERT INTO children (name, birth_date, parent_id) VALUES
+              ('Child1', '2010-03-20', 1);
+              
+              INSERT INTO children (name, birth_date, parent_id) VALUES
+              ('Child2', '2015-08-10', 2);

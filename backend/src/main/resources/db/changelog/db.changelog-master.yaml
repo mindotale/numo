@@ -1,3 +1,5 @@
 databaseChangeLog:
   - include:
       file: db/changelog/01_Initialize_database.yaml
+  - include:
+      file: db/changelog/02_Populate_records.yaml

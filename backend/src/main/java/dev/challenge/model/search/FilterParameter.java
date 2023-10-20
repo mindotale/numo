@@ -1,0 +1,17 @@
+package dev.challenge.model.search;
+
+import dev.challenge.enums.FilterType;
+import java.util.List;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import lombok.Data;
+import lombok.experimental.Accessors;
+
+@Data
+@Accessors(chain = true)
+public class FilterParameter {
+
+  @NotEmpty private String property;
+  @NotNull private FilterType type;
+  @NotEmpty private List<String> values;
+}

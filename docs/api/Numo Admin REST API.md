@@ -60,15 +60,13 @@
 
 |Parameter|Value|
 |-|-|
-|offset|0|
-|limit|0|
+|page|0|
+|pageSize|0|
 
 **Response**
 ```javascript
 {
-    "offset": 0,
-    "limit": 0,
-    "groups": [
+    "items": [
         {
             "id": "00000000-0000-0000-0000-000000000000",
             "name": "string",
@@ -81,7 +79,17 @@
                 },
             ]
         }
-    ]
+    ],
+    "pagination": {
+        "page": 0,
+        "pageSize": 0,
+        "totalItems": 0,
+        "totalPages": 0,
+        "first": 0,
+        "last": 0,
+        "prev": 0,
+        "next": 0
+    }
 }
 ```
 
@@ -199,14 +207,13 @@
 
 |Parameter|Value|
 |-|-|
-|offset|0|
-|limit|0|
+|page|0|
+|pageSize|0|
 
 **Response**
 ```javascript
 {
-    "groupId": 0,
-    "children": [
+    "items": [
         {
             "id": "00000000-0000-0000-0000-000000000000",
             "parentId": "00000000-0000-0000-0000-000000000000",
@@ -214,8 +221,16 @@
             "age": 0
         }
     ],
-    "offset": 0,
-    "limit": 0
+    "pagination": {
+        "page": 0,
+        "pageSize": 0,
+        "totalItems": 0,
+        "totalPages": 0,
+        "first": 0,
+        "last": 0,
+        "prev": 0,
+        "next": 0
+    }
 }
 ```
 
@@ -263,13 +278,13 @@
 
 |Parameter|Value|
 |-|-|
-|offset|0|
-|limit|0|
+|page|0|
+|pageSize|0|
 
 **Response**
 ```javascript
 {
-    "parents": [
+    "items": [
         {
             "id": "00000000-0000-0000-0000-000000000000",
             "name": "string",
@@ -282,8 +297,16 @@
             "lastActiveAt": "0000-00-00T00:00:00.000Z",
         }
     ],
-    "offset": 0,
-    "limit": 0
+    "pagination": {
+        "page": 0,
+        "pageSize": 0,
+        "totalItems": 0,
+        "totalPages": 0,
+        "first": 0,
+        "last": 0,
+        "prev": 0,
+        "next": 0
+    }
 }
 ```
 
@@ -295,20 +318,27 @@
 
 |Parameter|Value|
 |-|-|
-|offset|0|
-|limit|0|
+|page|0|
+|pageSize|0|
 
 **Response**
 ```javascript
 {
-    "parentId": "00000000-0000-0000-0000-000000000000",
-    "likes": [
+    "items": [
         {
             "messageId": ""
         }
     ],
-    "offset": 0,
-    "limit": 0
+    "pagination": {
+        "page": 0,
+        "pageSize": 0,
+        "totalItems": 0,
+        "totalPages": 0,
+        "first": 0,
+        "last": 0,
+        "prev": 0,
+        "next": 0
+    }
 }
 ```
 
@@ -320,20 +350,27 @@
 
 |Parameter|Value|
 |-|-|
-|offset|0|
-|limit|0|
+|page|0|
+|pageSize|0|
 
 **Response**
 ```javascript
 {
-    "parentId": "00000000-0000-0000-0000-000000000000",
-    "dislikes": [
+    "items": [
         {
             "messageId": ""
         }
     ],
-    "offset": 0,
-    "limit": 0
+    "pagination": {
+        "page": 0,
+        "pageSize": 0,
+        "totalItems": 0,
+        "totalPages": 0,
+        "first": 0,
+        "last": 0,
+        "prev": 0,
+        "next": 0
+    }
 }
 ```
 
@@ -362,13 +399,13 @@
 
 |Parameter|Value|
 |-|-|
-|offset|0|
-|limit|0|
+|page|0|
+|pageSize|0|
 
 **Response**
 ```javascript
 {
-    "children": [
+    "items": [
         {
             "id": "00000000-0000-0000-0000-000000000000",
             "parentId": "00000000-0000-0000-0000-000000000000",
@@ -376,8 +413,16 @@
             "age": 0
         }
     ],
-    "offset": 0,
-    "limit": 0
+    "pagination": {
+        "page": 0,
+        "pageSize": 0,
+        "totalItems": 0,
+        "totalPages": 0,
+        "first": 0,
+        "last": 0,
+        "prev": 0,
+        "next": 0
+    }
 }
 ```
 
@@ -407,13 +452,13 @@
 
 |Parameter|Value|
 |-|-|
-|offset|0|
-|limit|0|
+|page|0|
+|pageSize|0|
 
 **Response**
 ```javascript
 {
-    "messages": [
+    "items": [
         {
             "id": "00000000-0000-0000-0000-000000000000",
             "groupId": "00000000-0000-0000-0000-000000000000",
@@ -423,8 +468,16 @@
             "repeatDays": 0
         }
     ],
-    "offset": 0,
-    "limit": 0
+    "pagination": {
+        "page": 0,
+        "pageSize": 0,
+        "totalItems": 0,
+        "totalPages": 0,
+        "first": 0,
+        "last": 0,
+        "prev": 0,
+        "next": 0
+    }
 }
 ```
 

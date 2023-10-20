@@ -391,10 +391,10 @@
 ```javascript
 {
     "id": "00000000-0000-0000-0000-000000000000",
-    "groupId": "",
+    "groupId": "00000000-0000-0000-0000-000000000000",
     "name": "string",
-    "content": "",
-    "startDate": "",
+    "content": "string",
+    "startDate": "0000-00-00T00:00:00.000Z",
     "repeatDays": 0
 }
 ```
@@ -416,10 +416,10 @@
     "messages": [
         {
             "id": "00000000-0000-0000-0000-000000000000",
-            "groupId": "",
-            "content": "",
+            "groupId": "00000000-0000-0000-0000-000000000000",
+            "content": "string",
             "name": "string",
-            "startDate": "",
+            "startDate": "0000-00-00T00:00:00.000Z",
             "repeatDays": 0
         }
     ],
@@ -435,10 +435,10 @@
 **Request**
 ```javascript
 {
-    "groupId": "",
+    "groupId": "00000000-0000-0000-0000-000000000000",
     "name": "string",
-    "content": "",
-    "startDate": "",
+    "content": "string",
+    "startDate": "0000-00-00T00:00:00.000Z",
     "repeatDays": 0
 }
 ```
@@ -447,10 +447,10 @@
 ```javascript
 {
     "id": "00000000-0000-0000-0000-000000000000",
-    "groupId": "",
+    "groupId": "00000000-0000-0000-0000-000000000000",
     "name": "string",
-    "content": "",
-    "startDate": "",
+    "content": "string",
+    "startDate": "0000-00-00T00:00:00.000Z",
     "repeatDays": 0
 }
 ```
@@ -462,10 +462,10 @@
 **Request**
 ```javascript
 {
-    "groupId": "",
+    "groupId": "00000000-0000-0000-0000-000000000000",
     "name": "string",
-    "content": "",
-    "startDate": "",
+    "content": "string",
+    "startDate": "0000-00-00T00:00:00.000Z",
     "repeatDays": 0
 }
 ```
@@ -474,10 +474,10 @@
 ```javascript
 {
     "id": "00000000-0000-0000-0000-000000000000",
-    "groupId": "",
+    "groupId": "00000000-0000-0000-0000-000000000000",
     "name": "string",
-    "content": "",
-    "startDate": "",
+    "content": "string",
+    "startDate": "0000-00-00T00:00:00.000Z",
     "repeatDays": 0
 }
 ```

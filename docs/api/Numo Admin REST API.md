@@ -25,9 +25,11 @@
     - [Get Parent Likes](#get-parent-likes)
     - [Get Parent Dislikes](#get-parent-dislikes)
   - [Children](#children)
+    - [Child](#child)
     - [Get a Child](#get-a-child)
     - [Get Children](#get-children)
   - [Messages](#messages)
+    - [Message](#message)
     - [Get a Message](#get-a-message)
     - [Get Messages](#get-messages)
     - [Create a Message](#create-a-message)
@@ -377,6 +379,16 @@
 
 ## Children
 
+### Child
+```javascript
+{
+    "id": "00000000-0000-0000-0000-000000000000",
+    "parentId": "00000000-0000-0000-0000-000000000000",
+    "name": "string",
+    "age": 0
+}
+```
+
 ### Get a Child
 
 `GET` /children/{id}
@@ -387,7 +399,7 @@
     "id": "00000000-0000-0000-0000-000000000000",
     "parentId": "00000000-0000-0000-0000-000000000000",
     "name": "string",
-    "age": 0,
+    "age": 0
 }
 ```
 
@@ -427,6 +439,18 @@
 ```
 
 ## Messages 
+
+### Message
+```javascript
+{
+    "id": "00000000-0000-0000-0000-000000000000",
+    "groupId": "00000000-0000-0000-0000-000000000000",
+    "name": "string",
+    "content": "string",
+    "startDate": "0000-00-00T00:00:00.000Z",
+    "repeatDays": 0
+}
+```
 
 ### Get a Message
 

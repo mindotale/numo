@@ -10,6 +10,7 @@
   - [Introduction](#introduction)
   - [Table of Contents](#table-of-contents)
   - [Groups](#groups)
+    - [Group](#group)
     - [Get All Groups](#get-all-groups)
     - [Get a Group](#get-a-group)
     - [Create a Group](#create-a-group)
@@ -18,8 +19,11 @@
     - [Get a Group Child](#get-a-group-child)
     - [Get Group Children](#get-group-children)
   - [Parents](#parents)
+    - [Parent](#parent)
     - [Get a Parent](#get-a-parent)
     - [Get Parents](#get-parents)
+    - [Get Parent Likes](#get-parent-likes)
+    - [Get Parent Dislikes](#get-parent-dislikes)
   - [Children](#children)
     - [Get a Child](#get-a-child)
     - [Get Children](#get-children)
@@ -31,6 +35,22 @@
     - [Delete a Message](#delete-a-message)
 
 ## Groups
+
+### Group
+```javascript
+{
+    "id": "",
+    "name": "",
+    "count":  0,
+    "properties": [
+        {
+            "name": "",
+            "operator": ""
+            "value": ""
+        },
+    ]
+}
+```
 
 ### Get All Groups
 
@@ -52,7 +72,7 @@
         {
             "id": "",
             "name": "",
-            "count": "",
+            "count":  0,
             "properties": [
                 {
                     "name": "",
@@ -74,7 +94,7 @@
 {
     "id": "",
     "name": "",
-    "count": "",
+    "count":  0,
     "properties": [
         {
             "name": "",
@@ -108,7 +128,7 @@
 {
     "id": "",
     "name": "",
-    "count": "",
+    "count":  0,
     "properties": [
         {
             "name": "",
@@ -142,7 +162,7 @@
 {
     "id": "",
     "name": "",
-    "count": "",
+    "count":  0,
     "properties": [
         {
             "name": "",
@@ -201,6 +221,21 @@
 
 ## Parents
 
+### Parent
+```javascript
+{
+    "id": "",
+    "name": "",
+    "location": "",
+    "childСount": 0,
+    "source": "",
+    "likeCount": 0,
+    "dislikeCount": 0,
+    "registeredAt": "",
+    "lastActiveAt": ""
+}
+```
+
 ### Get a Parent
 
 `GET` /parents/{id}
@@ -210,7 +245,13 @@
 {
     "id": "",
     "name": "",
-    "registrationDate": ""
+    "location": "",
+    "childСount": 0,
+    "source": "",
+    "likeCount": 0,
+    "dislikeCount": 0,
+    "registeredAt": "",
+    "lastActiveAt": ""
 }
 ```
 
@@ -228,18 +269,74 @@
 **Response**
 ```javascript
 {
-    "children": [
+    "parents": [
         {
             "id": "",
-            "parentId": "",
             "name": "",
-            "age": 0
+            "location": "",
+            "childСount": 0,
+            "source": "",
+            "likeCount": 0,
+            "dislikeCount": 0,
+            "registeredAt": "",
+            "lastActiveAt": ""
         }
     ],
     "offset": 0,
     "limit": 0
 }
 ```
+
+### Get Parent Likes
+
+`GET` /parents/{id}/likes
+
+**Query**
+
+|Parameter|Value|
+|-|-|
+|offset|0|
+|limit|0|
+
+**Response**
+```javascript
+{
+    "parentId": "",
+    "likes": [
+        {
+            "messageId": ""
+        }
+    ],
+    "offset": 0,
+    "limit": 0
+}
+```
+
+### Get Parent Dislikes
+
+`GET` /parents/{id}/dislikes
+
+**Query**
+
+|Parameter|Value|
+|-|-|
+|offset|0|
+|limit|0|
+
+**Response**
+```javascript
+{
+    "parentId": "",
+    "dislikes": [
+        {
+            "messageId": ""
+        }
+    ],
+    "offset": 0,
+    "limit": 0
+}
+```
+
 
 ## Children
 
@@ -253,7 +350,7 @@
     "id": "",
     "parentId": "",
     "name": "",
-    "age": 0
+    "age": 0,
 }
 ```
 

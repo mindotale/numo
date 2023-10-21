@@ -41,6 +41,18 @@ services:
     ports:
       - "8080:8080"
 
+  frontend:
+    build:
+      context: ./frontend
+    container_name: frontend
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - dev_challenge
+    ports:
+      - "8000:8080"
+
   test:
     build:
       context: .

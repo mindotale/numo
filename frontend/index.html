@@ -19,24 +19,24 @@
       <div class="sidebar col-lg-1 col-2 p-0 bg-body-tertiary">
       
 
-            <ul class="nav flex-column">
+            <ul class="nav flex-column text-center">
               <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="#">
+                <a class="nav-link pt-2 pl-0 pr-0 align-items-center" href="#">
                   <img src="images/icon1.svg" alt="">
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="#">
+                <a class="nav-link pt-2 pl-0 pr-0 align-items-center" href="#">
                   <img src="images/icon2.svg" alt="">
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="#">
+                <a class="nav-link pt-2 pl-0 pr-0 align-items-center" href="#">
                   <img src="images/icon3.svg" alt="">
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="#">
+                <a class="nav-link pt-2 pl-0 pr-0 align-items-center" href="#">
                   <img src="images/icon4.svg" alt="">
                 </a>
               </li>
@@ -70,7 +70,16 @@
     
             <div class="col-2">        
               <select class="form-select" aria-label="Default select example">
-              <option selected>Мін.-макс. вік</option>
+              <option selected>Мін.-макс. кількість дітей</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="3">4</option>
+              <option value="3">5</option>
+            </select></div>
+            <div class="col-2">        
+              <select class="form-select" aria-label="Default select example">
+              <option selected>Місто</option>
               <option value="1">2</option>
               <option value="2">3</option>
               <option value="3">4</option>
@@ -79,16 +88,7 @@
             </select></div>
             <div class="col-2">        
               <select class="form-select" aria-label="Default select example">
-              <option selected>Мін.-макс. вік</option>
-              <option value="1">2</option>
-              <option value="2">3</option>
-              <option value="3">4</option>
-              <option value="3">5</option>
-              <option value="3">6</option>
-            </select></div>
-            <div class="col-2">        
-              <select class="form-select" aria-label="Default select example">
-              <option selected>Мін.-макс. вік</option>
+              <option selected>Месенджер</option>
               <option value="1">2</option>
               <option value="2">3</option>
               <option value="3">4</option>
@@ -101,16 +101,13 @@
           <table class="table table-borderless table-sm">
             <thead>
               <tr>
-                <th scope="col">Прізвище</th>
-                <th scope="col">Телефон</th>
-                <th scope="col">Мережа</th>
-                <th scope="col">Діти</th>
+                <th scope="col">Назва</th>
+                <th scope="col">Кількість</th>
+                <th scope="col">Мін.-макс. вік</th>
+                <th scope="col">Мін.-макс. кількість дітей</th>
 
-                <th scope="col">Вік</th>
-                <th scope="col">Місто</th>
-                <th scope="col">Статус</th>
-                <th scope="col">Частота порад</th>
-                <th scope="col">Візити</th>
+                <th scope="col">Користувач</th>
+                <th scope="col">Населений пункт</th>
               </tr>
             </thead>
             <tbody>
@@ -121,9 +118,7 @@
                 <td>2</td>
                 <td>2</td>
                 <td>Миколаїі</td>
-                <td>Активні користувачі</td>
-                <td>Раз в тиждень</td>
-                <td>Раз на 3 місяці</td>
+
               </tr>
               <tr>
                 <td><img src="images/user.png" alt=""> Велицька А. В.</td>
@@ -132,9 +127,6 @@
                 <td>2</td>
                 <td>2</td>
                 <td>Миколаїі</td>
-                <td>Активні користувачі</td>
-                <td>Раз в тиждень</td>
-                <td>Раз на 3 місяці</td>
               </tr>
               <tr>
                 <td><img src="images/user.png" alt=""> Велицька А. В.</td>
@@ -143,18 +135,96 @@
                 <td>2</td>
                 <td>2</td>
                 <td>Миколаїі</td>
-                <td>Активні користувачі</td>
-                <td>Раз в тиждень</td>
-                <td>Раз на 3 місяці</td>
               </tr>
             </tbody>
           </table>
         </div>
+
+        <div class="wrap_table row m-3">
+          <h3>Користувачі (створення групи)</h3>
+        <div class="row pt-3 pb-3 w-100 wpap_filters">
+          <div class="col-2">        
+            <select class="form-select" aria-label="Default select example">
+            <option selected>Мін.-макс. вік</option>
+            <option value="1">2</option>
+            <option value="2">3</option>
+            <option value="3">4</option>
+            <option value="3">5</option>
+            <option value="3">6</option>
+          </select></div>
+  
+          <div class="col-2">        
+            <select class="form-select" aria-label="Default select example">
+            <option selected>Мін.-макс. кількість дітей</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="3">4</option>
+            <option value="3">5</option>
+          </select></div>
+          <div class="col-2">        
+            <select class="form-select" aria-label="Default select example">
+            <option selected>Місто</option>
+            <option value="1">2</option>
+            <option value="2">3</option>
+            <option value="3">4</option>
+            <option value="3">5</option>
+            <option value="3">6</option>
+          </select></div>
+          <div class="col-2">        
+            <select class="form-select" aria-label="Default select example">
+            <option selected>Месенджер</option>
+            <option value="1">2</option>
+            <option value="2">3</option>
+            <option value="3">4</option>
+            <option value="3">5</option>
+            <option value="3">6</option>
+          </select></div>
+          <div class="col-2"><a href="#">Очистити х</a></div>
+          <div class="col-2"><button class="btn">Видалити</button></div>
+        </div>
+        <table class="table table-borderless table-sm">
+          <thead>
+            <tr>
+              <th scope="col">Прізвище</th>
+              <th scope="col">Вік</th>
+              <th scope="col">Батько</th>
+              <th scope="col">Месенджер</th>
+
+              <th scope="col">Місто</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="images/user.png" alt=""> Велицька А. В.</td>
+              <td>2</td>
+              <td>Батько</td>
+              <td>вайбер</td>
+              <td>Миколаїі</td>
+            </tr>
+            <tr>
+              <td><img src="images/user.png" alt=""> Велицька А. В.</td>
+              <td>2</td>
+              <td>Батько</td>
+              <td>вайбер</td>
+              <td>Миколаїі</td>
+            </tr>
+            <tr>
+              <td><img src="images/user.png" alt=""> Велицька А. В.</td>
+              <td>2</td>
+              <td>Батько</td>
+              <td>вайбер</td>
+              <td>Миколаїі</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
         </div>
       </main>
     </div>
   </div>
     <script type="module" src="scripts/app.js"></script>
-    <script src="/scripts/bootstrap.bundle.js"></script>
 </body>
 </html>

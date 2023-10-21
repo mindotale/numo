@@ -27,6 +27,15 @@ h3 {
     border-radius: 20px;
     color: #788AA3;
 }
+.sidebar {
+  height: fit-content;
+  padding: 30px 0!important;
+  box-shadow: 3px 3px 3px #eee;
+}
+.nav-link {
+  padding-left: 0;
+  padding-right: 0;
+}
 .back {
   text-align: right;
 }

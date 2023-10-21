@@ -65,4 +65,15 @@ public class UserGroupsService {
     var page = new PageImpl<>(result, pageResult.getPageable(), pageResult.getTotalElements());
     return new SearchResponse<>(request, page);
   }
+
+  public void deleteUserGroup(Long groupId) {
+    userGroupsRepository
+        .findById(groupId)
+        .ifPresentOrElse(
+            userGroupsRepository::delete,
+            () -> {
+              throw new ResponseStatusException(
+                  HttpStatus.NOT_FOUND, String.format("User Group with %s not found", groupId));
+            });
+  }
 }

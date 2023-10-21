@@ -10,13 +10,16 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import javax.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
@@ -60,6 +63,14 @@ public class UserGroupsController {
   public SearchResponse<UserGroupDto> getUserGroups(@Valid SearchRequest request) {
     log.info("Searching user groups by parameters: {}", request);
     return userGroupsService.getUserGroups(request);
+  }
+
+  @Operation(summary = "Delete user group")
+  @DeleteMapping("/{groupId}")
+  @ResponseStatus(HttpStatus.NO_CONTENT)
+  public void deleteUserGroup(@PathVariable Long groupId) {
+    log.info("Deleting user group with ID: {}", groupId);
+    userGroupsService.deleteUserGroup(groupId);
   }
 
   //  @Operation(summary = "Get all user groups")

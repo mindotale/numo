@@ -1,5 +1,6 @@
 package dev.challenge.controller;
 
+import dev.challenge.dto.ChildDto;
 import dev.challenge.dto.UserGroupDto;
 import dev.challenge.model.search.SearchRequest;
 import dev.challenge.model.search.SearchResponse;
@@ -73,11 +74,11 @@ public class UserGroupsController {
     userGroupsService.deleteUserGroup(groupId);
   }
 
-  //  @Operation(summary = "Get all user groups")
-  //  @GetMapping("/{groupId}/users")
-  //  public SearchResponse<UserGroupDto> getUserGroups(
-  //      @PathVariable String groupId) {
-  //    log.info("Getting users in group ID: {}", groupId);
-  //    return userGroupsService.getUserGroups(request);
-  //  }
+  @Operation(summary = "Get children in group")
+  @GetMapping("/{groupId}/children")
+  public SearchResponse<ChildDto> getGroupChildren(
+      @Valid SearchRequest request, @PathVariable Long groupId) {
+    log.info("Searching children in groups with ID: {}", groupId);
+    return userGroupsService.getGroupChildren(groupId, request);
+  }
 }

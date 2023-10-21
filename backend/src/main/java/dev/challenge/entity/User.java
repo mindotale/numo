@@ -45,7 +45,7 @@ public class User {
   @OneToMany(
       mappedBy = "parent",
       cascade = CascadeType.ALL,
-      fetch = FetchType.LAZY,
+      fetch = FetchType.EAGER,
       orphanRemoval = true)
   private List<Child> children = new ArrayList<>();
 }

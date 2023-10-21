@@ -210,20 +210,6 @@
 
 `DELETE` /groups/{id}
 
-### Get a Group Child
-
-`GET` /groups/{group_id}/children/{child_id}
-
-**Response**
-```json
-{
-    "id": 123,
-    "parentId": 789,
-    "name": "string",
-    "birthDate": "2002-12-31"
-}
-```
-
 ### Get Group Children
 
 `GET` /groups/{id}/children

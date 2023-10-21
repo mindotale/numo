@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: 01_Initialize_database
+      author: Numo
+      changes:
+        - sql:
+            sql: |
+              INSERT INTO user_groups (name, min_child_count)
+                VALUES('Двоє і більше дітей', 2);
+              
+              INSERT INTO user_groups (name, locations)
+                VALUES('Жителі Харкова і Дніпра', '["Харків", "Дніпро"]'::jsonb);
+              
+              INSERT INTO user_groups (name, sources)
+                VALUES('Користувачі вайбера', '["Вайбер"]'::jsonb);
+              
+              INSERT INTO user_groups (name, sources)
+                VALUES('Користувачі телеграма', '["Телеграм"]'::jsonb);

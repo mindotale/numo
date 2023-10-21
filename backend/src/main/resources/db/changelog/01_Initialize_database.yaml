@@ -40,7 +40,7 @@ databaseChangeLog:
                 max_age         INTEGER,
                 min_child_count INTEGER,
                 max_child_count INTEGER,
-                locations       JSONB                                   NOT NULL,
-                sources         JSONB                                   NOT NULL,
+                locations       JSONB,
+                sources         JSONB,
                 CONSTRAINT pk_user_groups PRIMARY KEY (id)
               );

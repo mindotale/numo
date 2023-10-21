@@ -1,7 +1,5 @@
 package dev.challenge.model.search;
 
-import java.util.List;
-import javax.validation.Valid;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
@@ -11,8 +9,6 @@ import lombok.experimental.Accessors;
 @Data
 @Accessors(chain = true)
 public class SearchRequest {
-
-  @Valid private List<OrderClause> order;
 
   @Min(0)
   @NotNull

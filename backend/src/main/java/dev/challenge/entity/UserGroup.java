@@ -36,10 +36,10 @@ public class UserGroup {
   private Integer maxChildCount;
 
   @Type(type = "JSONB")
-  @Column(nullable = false, columnDefinition = "JSONB NOT NULL")
+  @Column(nullable = false, columnDefinition = "JSONB")
   private List<String> locations = new ArrayList<>();
 
   @Type(type = "JSONB")
-  @Column(nullable = false, columnDefinition = "JSONB NOT NULL")
+  @Column(nullable = false, columnDefinition = "JSONB")
   private List<String> sources = new ArrayList<>();
 }

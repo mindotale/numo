@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: 01_Initialize_database
+      id: 02_Populate_parents_and_children
       author: Numo
       changes:
         - sql:

@@ -2,4 +2,6 @@ databaseChangeLog:
   - include:
       file: db/changelog/01_Initialize_database.yaml
   - include:
-      file: db/changelog/02_Populate_records.yaml
+      file: db/changelog/02_Populate_parents_and_children.yaml
+  - include:
+      file: db/changelog/03_Populate_groups.yaml

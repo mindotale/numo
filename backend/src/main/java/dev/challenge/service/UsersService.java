@@ -5,7 +5,6 @@ import dev.challenge.dto.UserDto;
 import dev.challenge.dto.UserGroupDto.Fields;
 import dev.challenge.entity.QChild;
 import dev.challenge.mapper.ChildrenMapper;
-import dev.challenge.mapper.SearchPageRequestMapper;
 import dev.challenge.mapper.UsersMapper;
 import dev.challenge.model.search.SearchRequest;
 import dev.challenge.model.search.SearchResponse;
@@ -30,7 +29,6 @@ public class UsersService {
   private final UsersRepository usersRepository;
   private final ChildrenRepository childrenRepository;
   private final UserGroupsRepository userGroupsRepository;
-  private final SearchPageRequestMapper searchPageRequestMapper;
   private final SearchPredicateResolverService predicateResolverService;
 
   public UserDto getById(Long id) {
@@ -83,15 +81,4 @@ public class UsersService {
     var predicate = predicateResolverService.resolve(userGroup);
     return usersRepository.count(predicate);
   }
-
-  //  public SearchResponse<UserDto> getUsersBySearchFilter(SearchRequest request) {
-  //    var pageRequest = searchPageRequestMapper.toPageRequest(request);
-  //    var predicate = predicateResolverService.resolve(request.getFilter());
-  //
-  //    var pageResult = usersRepository.findAll(predicate, pageRequest);
-  //
-  //    var result = pageResult.stream().map(usersMapper::toDto).collect(Collectors.toList());
-  //    var page = new PageImpl<>(result, pageResult.getPageable(), pageResult.getTotalElements());
-  //    return new SearchResponse<>(request, page);
-  //  }
 }

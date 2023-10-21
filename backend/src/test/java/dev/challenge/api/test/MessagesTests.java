@@ -7,9 +7,9 @@ import org.junit.jupiter.api.Assertions;
 
 public class MessagesTests {
 
-    // @Test
-    public void shouldGetMessages() {
-        Response response = MessagesEndpoints.getMessages();
-        Assertions.assertEquals(response.getContentType(), ContentType.JSON.toString());
-    }
+  // @Test
+  public void shouldGetMessages() {
+    Response response = MessagesEndpoints.getMessages();
+    Assertions.assertEquals(response.getContentType(), ContentType.JSON.toString());
+  }
 }

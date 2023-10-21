@@ -39,9 +39,10 @@ public class UserGroupsService {
                 () ->
                     new ResponseStatusException(
                         HttpStatus.NOT_FOUND, String.format("User Group with %s not found", id)));
-    existingUserGroup.setProperties(userGroupDto.getProperties());
+    var userGroup = userGroupsMapper.toEntity(userGroupDto);
+    userGroup.setId(existingUserGroup.getId());
 
-    var storedUserGroup = userGroupsRepository.save(existingUserGroup);
+    var storedUserGroup = userGroupsRepository.save(userGroup);
     return userGroupsMapper.toDto(storedUserGroup);
   }
 

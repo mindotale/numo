@@ -1,57 +1,46 @@
 package dev.challenge.service;
 
-import static org.apache.commons.collections4.ListUtils.emptyIfNull;
-import static org.apache.commons.lang3.ObjectUtils.isEmpty;
+import static org.apache.commons.lang3.ObjectUtils.isNotEmpty;
 
 import com.querydsl.core.BooleanBuilder;
-import com.querydsl.core.types.Path;
 import com.querydsl.core.types.Predicate;
-import dev.challenge.model.search.FilterParameter;
-import dev.challenge.service.filter.FilterPathWithBinding;
-import java.util.List;
-import java.util.Optional;
-import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Component;
-import org.springframework.web.server.ResponseStatusException;
+import dev.challenge.entity.QUser;
+import dev.challenge.entity.UserGroup;
+import java.time.LocalDate;
+import org.springframework.stereotype.Service;
 
-@Component
-@RequiredArgsConstructor
+@Service
 public class SearchPredicateResolverService {
 
-  private final TypeConverterService typeConverterService;
-  private final BindingCustomizerService bindingCustomizerService;
-
-  public Predicate resolve(List<FilterParameter> filters) {
+  public Predicate resolve(UserGroup userGroup) {
     var predicate = new BooleanBuilder();
-    var bindings = bindingCustomizerService.customize();
 
-    emptyIfNull(filters)
-        .forEach(
-            filter -> {
-              var binding =
-                  bindings
-                      .getBindingForProperty(filter.getName())
-                      .orElseThrow(
-                          () ->
-                              new ResponseStatusException(
-                                  HttpStatus.BAD_REQUEST,
-                                  "Filtering not allowed by property: " + filter.getName()));
+    if (userGroup.getMinAge() != null) {
+      var date = LocalDate.now().minusDays(userGroup.getMinAge());
+      predicate.and(QUser.user.birthDate.goe(date));
+    }
 
-              predicate.and(invokeBinding(binding, filter));
-            });
+    if (userGroup.getMaxAge() != null) {
+      var date = LocalDate.now().minusDays(userGroup.getMinAge());
+      predicate.and(QUser.user.birthDate.loe(date));
+    }
 
-    return Optional.of(predicate).map(BooleanBuilder::getValue).orElseGet(BooleanBuilder::new);
-  }
+    if (userGroup.getMaxChildCount() != null) {
+      predicate.and(QUser.user.children.size().loe(userGroup.getMaxChildCount()));
+    }
 
-  protected Predicate invokeBinding(
-      FilterPathWithBinding<? extends Path<?>, ?> binding, FilterParameter filter) {
-    var rawValues = emptyIfNull(filter.getValues());
-    var values =
-        isEmpty(binding.getPrefilter())
-            ? typeConverterService.convert(rawValues, binding.getPath())
-            : rawValues;
+    if (userGroup.getMinChildCount() != null) {
+      predicate.and(QUser.user.children.size().goe(userGroup.getMinChildCount()));
+    }
 
-    return binding.bind(filter.getOperator(), values);
+    if (isNotEmpty(userGroup.getLocations())) {
+      predicate.and(QUser.user.location.in(userGroup.getLocations()));
+    }
+
+    if (isNotEmpty(userGroup.getSources())) {
+      predicate.and(QUser.user.source.in(userGroup.getSources()));
+    }
+
+    return predicate;
   }
 }

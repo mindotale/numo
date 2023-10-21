@@ -41,7 +41,7 @@
 ## Groups
 
 ### Group
-```javascript
+```json
 {
     "id": "00000000-0000-0000-0000-000000000000",
     "name": "string",
@@ -64,7 +64,7 @@
 `GET` /groups/{id}
 
 **Response**
-```javascript
+```json
 {
     "id": "00000000-0000-0000-0000-000000000000",
     "name": "string",
@@ -88,41 +88,41 @@
 
 **Query**
 
-|Parameter|Value|
-|-|-|
-|page|0|
-|pageSize|0|
+| Parameter | Value |
+|-----------|-------|
+| page      | 0     |
+| pageSize  | 0     |
 
 **Response**
-```javascript
+```json
 {
-    "items": [
-        {
-            "id": "00000000-0000-0000-0000-000000000000",
-            "name": "string",
-            "count":  0,
-            "minAge": 0,
-            "maxAge": 0,
-            "minChildCount": 0,
-            "maxChildCount": 0,
-            "locations": [
-                "string"
-            ],
-            "sources": [
-                "string"
-            ]
-        }
+  "result": {
+    "content": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "name": "string",
+        "count": 0,
+        "minAge": 0,
+        "maxAge": 0,
+        "minChildCount": 0,
+        "maxChildCount": 0,
+        "locations": [
+          "string"
+        ],
+        "sources": [
+          "string"
+        ]
+      }
     ],
-    "pagination": {
-        "page": 0,
-        "pageSize": 0,
-        "totalItems": 0,
-        "totalPages": 0,
-        "first": 0,
-        "last": 0,
-        "prev": 0,
-        "next": 0
-    }
+    "pageable": {
+      "pageSize": 100,
+      "pageNumber": 0
+    },
+    "totalElements": 10000,
+    "totalPages": 100,
+    "last": false,
+    "first": true
+  }
 }
 ```
 
@@ -131,7 +131,7 @@
 `POST` /groups
 
 **Request**
-```javascript
+```json
 {
     "name": "string",
     "minAge": 0,
@@ -148,7 +148,7 @@
 ```
 
 **Response**
-```javascript
+```json
 {
     "id": "00000000-0000-0000-0000-000000000000",
     "name": "string",
@@ -171,7 +171,7 @@
 `PUT` /groups/{id}
 
 **Request**
-```javascript
+```json
 {
     "name": "string",
     "minAge": 0,
@@ -188,7 +188,7 @@
 ```
 
 **Response**
-```javascript
+```json
 {
     "id": "00000000-0000-0000-0000-000000000000",
     "name": "string",
@@ -215,7 +215,7 @@
 `GET` /groups/{group_id}/children/{child_id}
 
 **Response**
-```javascript
+```json
 {
     "id": "00000000-0000-0000-0000-000000000000",
     "parentId": "00000000-0000-0000-0000-000000000000",
@@ -230,39 +230,39 @@
 
 **Query**
 
-|Parameter|Value|
-|-|-|
-|page|0|
-|pageSize|0|
+| Parameter | Value |
+|-----------|-------|
+| page      | 0     |
+| pageSize  | 0     |
 
 **Response**
-```javascript
+```json
 {
-    "items": [
-        {
-            "id": "00000000-0000-0000-0000-000000000000",
-            "parentId": "00000000-0000-0000-0000-000000000000",
-            "name": "string",
-            "birthday": "0000-00-00T00:00:00.000Z"
-        }
+  "result": {
+    "content": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "parentId": "00000000-0000-0000-0000-000000000000",
+        "name": "string",
+        "birthday": "0000-00-00T00:00:00.000Z"
+      }
     ],
-    "pagination": {
-        "page": 0,
-        "pageSize": 0,
-        "totalItems": 0,
-        "totalPages": 0,
-        "first": 0,
-        "last": 0,
-        "prev": 0,
-        "next": 0
-    }
+    "pageable": {
+      "pageSize": 100,
+      "pageNumber": 0
+    },
+    "totalElements": 10000,
+    "totalPages": 100,
+    "last": false,
+    "first": true
+  }
 }
 ```
 
 ## Parents
 
 ### Parent
-```javascript
+```json
 {
     "id": "00000000-0000-0000-0000-000000000000",
     "name": "string",
@@ -272,7 +272,7 @@
     "likeCount": 0,
     "dislikeCount": 0,
     "registeredAt": "0000-00-00T00:00:00.000Z",
-    "lastActiveAt": "0000-00-00T00:00:00.000Z",
+    "lastActiveAt": "0000-00-00T00:00:00.000Z"
 }
 ```
 
@@ -281,7 +281,7 @@
 `GET` /parents/{id}
 
 **Response**
-```javascript
+```json
 {
     "id": "00000000-0000-0000-0000-000000000000",
     "name": "string",
@@ -291,7 +291,7 @@
     "likeCount": 0,
     "dislikeCount": 0,
     "registeredAt": "0000-00-00T00:00:00.000Z",
-    "lastActiveAt": "0000-00-00T00:00:00.000Z",
+    "lastActiveAt": "0000-00-00T00:00:00.000Z"
 }
 ```
 
@@ -301,37 +301,37 @@
 
 **Query**
 
-|Parameter|Value|
-|-|-|
-|page|0|
-|pageSize|0|
+| Parameter | Value |
+|-----------|-------|
+| page      | 0     |
+| pageSize  | 0     |
 
 **Response**
-```javascript
+```json
 {
-    "items": [
-        {
-            "id": "00000000-0000-0000-0000-000000000000",
-            "name": "string",
-            "location": "string, string",
-            "childСount": 0,
-            "source": "string",
-            "likeCount": 0,
-            "dislikeCount": 0,
-            "registeredAt": "0000-00-00T00:00:00.000Z",
-            "lastActiveAt": "0000-00-00T00:00:00.000Z",
-        }
+  "result": {
+    "content": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "name": "string",
+        "location": "string, string",
+        "childСount": 0,
+        "source": "string",
+        "likeCount": 0,
+        "dislikeCount": 0,
+        "registeredAt": "0000-00-00T00:00:00.000Z",
+        "lastActiveAt": "0000-00-00T00:00:00.000Z"
+      }
     ],
-    "pagination": {
-        "page": 0,
-        "pageSize": 0,
-        "totalItems": 0,
-        "totalPages": 0,
-        "first": 0,
-        "last": 0,
-        "prev": 0,
-        "next": 0
-    }
+    "pageable": {
+      "pageSize": 100,
+      "pageNumber": 0
+    },
+    "totalElements": 10000,
+    "totalPages": 100,
+    "last": false,
+    "first": true
+  }
 }
 ```
 
@@ -341,32 +341,32 @@
 
 **Query**
 
-|Parameter|Value|
-|-|-|
-|page|0|
-|pageSize|0|
+| Parameter | Value |
+|-----------|-------|
+| page      | 0     |
+| pageSize  | 0     |
 
 **Response**
-```javascript
+```json
 {
-    "items": [
-        {
-            "id": "00000000-0000-0000-0000-000000000000",
-            "parentId": "00000000-0000-0000-0000-000000000000",
-            "name": "string",
-            "birthday": "0000-00-00T00:00:00.000Z"
-        }
+  "result": {
+    "content": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "parentId": "00000000-0000-0000-0000-000000000000",
+        "name": "string",
+        "birthday": "0000-00-00T00:00:00.000Z"
+      }
     ],
-    "pagination": {
-        "page": 0,
-        "pageSize": 0,
-        "totalItems": 0,
-        "totalPages": 0,
-        "first": 0,
-        "last": 0,
-        "prev": 0,
-        "next": 0
-    }
+    "pageable": {
+      "pageSize": 100,
+      "pageNumber": 0
+    },
+    "totalElements": 10000,
+    "totalPages": 100,
+    "last": false,
+    "first": true
+  }
 }
 ```
 
@@ -376,29 +376,29 @@
 
 **Query**
 
-|Parameter|Value|
-|-|-|
-|page|0|
-|pageSize|0|
+| Parameter | Value |
+|-----------|-------|
+| page      | 0     |
+| pageSize  | 0     |
 
 **Response**
-```javascript
+```json
 {
-    "items": [
-        {
-            "messageId": ""
-        }
+  "result": {
+    "content": [
+      {
+        "messageId": ""
+      }
     ],
-    "pagination": {
-        "page": 0,
-        "pageSize": 0,
-        "totalItems": 0,
-        "totalPages": 0,
-        "first": 0,
-        "last": 0,
-        "prev": 0,
-        "next": 0
-    }
+    "pageable": {
+      "pageSize": 100,
+      "pageNumber": 0
+    },
+    "totalElements": 10000,
+    "totalPages": 100,
+    "last": false,
+    "first": true
+  }
 }
 ```
 
@@ -408,29 +408,29 @@
 
 **Query**
 
-|Parameter|Value|
-|-|-|
-|page|0|
-|pageSize|0|
+| Parameter | Value |
+|-----------|-------|
+| page      | 0     |
+| pageSize  | 0     |
 
 **Response**
-```javascript
+```json
 {
-    "items": [
-        {
-            "messageId": ""
-        }
+  "result": {
+    "content": [
+      {
+        "messageId": ""
+      }
     ],
-    "pagination": {
-        "page": 0,
-        "pageSize": 0,
-        "totalItems": 0,
-        "totalPages": 0,
-        "first": 0,
-        "last": 0,
-        "prev": 0,
-        "next": 0
-    }
+    "pageable": {
+      "pageSize": 100,
+      "pageNumber": 0
+    },
+    "totalElements": 10000,
+    "totalPages": 100,
+    "last": false,
+    "first": true
+  }
 }
 ```
 
@@ -438,7 +438,7 @@
 ## Children
 
 ### Child
-```javascript
+```json
 {
     "id": "00000000-0000-0000-0000-000000000000",
     "parentId": "00000000-0000-0000-0000-000000000000",
@@ -452,7 +452,7 @@
 `GET` /children/{id}
 
 **Response**
-```javascript
+```json
 {
     "id": "00000000-0000-0000-0000-000000000000",
     "parentId": "00000000-0000-0000-0000-000000000000",
@@ -467,39 +467,39 @@
 
 **Query**
 
-|Parameter|Value|
-|-|-|
-|page|0|
-|pageSize|0|
+| Parameter | Value |
+|-----------|-------|
+| page      | 0     |
+| pageSize  | 0     |
 
 **Response**
-```javascript
+```json
 {
-    "items": [
-        {
-            "id": "00000000-0000-0000-0000-000000000000",
-            "parentId": "00000000-0000-0000-0000-000000000000",
-            "name": "string",
-            "birthday": "0000-00-00T00:00:00.000Z"
-        }
+  "result": {
+    "content": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "parentId": "00000000-0000-0000-0000-000000000000",
+        "name": "string",
+        "birthday": "0000-00-00T00:00:00.000Z"
+      }
     ],
-    "pagination": {
-        "page": 0,
-        "pageSize": 0,
-        "totalItems": 0,
-        "totalPages": 0,
-        "first": 0,
-        "last": 0,
-        "prev": 0,
-        "next": 0
-    }
+    "pageable": {
+      "pageSize": 100,
+      "pageNumber": 0
+    },
+    "totalElements": 10000,
+    "totalPages": 100,
+    "last": false,
+    "first": true
+  }
 }
 ```
 
 ## Messages 
 
 ### Message
-```javascript
+```json
 {
     "id": "00000000-0000-0000-0000-000000000000",
     "name": "string",
@@ -514,7 +514,7 @@
 `GET` /messages/{id}
 
 **Response**
-```javascript
+```json
 {
     "id": "00000000-0000-0000-0000-000000000000",
     "name": "string",
@@ -530,33 +530,33 @@
 
 **Query**
 
-|Parameter|Value|
-|-|-|
-|page|0|
-|pageSize|0|
+| Parameter | Value |
+|-----------|-------|
+| page      | 0     |
+| pageSize  | 0     |
 
 **Response**
-```javascript
+```json
 {
-    "items": [
-        {
-            "id": "00000000-0000-0000-0000-000000000000",
-            "content": "string",
-            "name": "string",
-            "startDate": "0000-00-00T00:00:00.000Z",
-            "repeatDays": 0
-        }
+  "result": {
+    "content": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "content": "string",
+        "name": "string",
+        "startDate": "0000-00-00T00:00:00.000Z",
+        "repeatDays": 0
+      }
     ],
-    "pagination": {
-        "page": 0,
-        "pageSize": 0,
-        "totalItems": 0,
-        "totalPages": 0,
-        "first": 0,
-        "last": 0,
-        "prev": 0,
-        "next": 0
-    }
+    "pageable": {
+      "pageSize": 100,
+      "pageNumber": 0
+    },
+    "totalElements": 10000,
+    "totalPages": 100,
+    "last": false,
+    "first": true
+  }
 }
 ```
 
@@ -565,7 +565,7 @@
 `POST` /messages
 
 **Request**
-```javascript
+```json
 {
     "groupIds": [
         "00000000-0000-0000-0000-000000000000"
@@ -578,7 +578,7 @@
 ```
 
 **Response**
-```javascript
+```json
 {
     "id": "00000000-0000-0000-0000-000000000000",
     "groupIds": [
@@ -596,7 +596,7 @@
 `PUT` /messages/{id}
 
 **Request**
-```javascript
+```json
 {
     "groupIds": [
         "00000000-0000-0000-0000-000000000000"
@@ -609,7 +609,7 @@
 ```
 
 **Response**
-```javascript
+```json
 {
     "id": "00000000-0000-0000-0000-000000000000",
     "groupIds": [
@@ -632,40 +632,40 @@
 
 **Query**
 
-|Parameter|Value|
-|-|-|
-|page|0|
-|pageSize|0|
+| Parameter | Value |
+|-----------|-------|
+| page      | 0     |
+| pageSize  | 0     |
 
 **Response**
-```javascript
+```json
 {
-    "items": [
-        {
-            "id": "00000000-0000-0000-0000-000000000000",
-            "name": "string",
-            "count":  0,
-            "minAge": 0,
-            "maxAge": 0,
-            "minChildCount": 0,
-            "maxChildCount": 0,
-            "locations": [
-                "string"
-            ],
-            "sources": [
-                "string"
-            ]
-        }
+  "result": {
+    "content": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "name": "string",
+        "count":  0,
+        "minAge": 0,
+        "maxAge": 0,
+        "minChildCount": 0,
+        "maxChildCount": 0,
+        "locations": [
+          "string"
+        ],
+        "sources": [
+          "string"
+        ]
+      }
     ],
-    "pagination": {
-        "page": 0,
-        "pageSize": 0,
-        "totalItems": 0,
-        "totalPages": 0,
-        "first": 0,
-        "last": 0,
-        "prev": 0,
-        "next": 0
-    }
+    "pageable": {
+      "pageSize": 100,
+      "pageNumber": 0
+    },
+    "totalElements": 10000,
+    "totalPages": 100,
+    "last": false,
+    "first": true
+  }
 }
 ```

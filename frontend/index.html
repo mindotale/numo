@@ -7,41 +7,36 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   
-  <div class="container mt-2 h-100">
+  <div class="container mt-2">
     <div class="row">
-      <div class="sidebar col-1 p-0 bg-body-tertiary">
+      <div class="sidebar col-lg-1 col-2 p-0 bg-body-tertiary">
         <div class="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
 
           <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
             <ul class="nav flex-column">
               <li class="nav-item">
                 <a class="nav-link d-flex align-items-center gap-2" href="#">
-            
+                  <img src="images/icon1.svg" alt="">
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link d-flex align-items-center gap-2" href="#">
-               
+                  <img src="images/icon2.svg" alt="">
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link d-flex align-items-center gap-2" href="#">
-                  
+                  <img src="images/icon3.svg" alt="">
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link d-flex align-items-center gap-2" href="#">
-            
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="#">
-              
+                  <img src="images/icon4.svg" alt="">
                 </a>
               </li>
             </ul>
@@ -50,14 +45,49 @@
         </div>
       </div>
   
-      <main class="col-md-10 ms-sm-auto col-lg-10 px-md-4">
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-          <div class="btn-toolbar mb-2 mb-md-0">
-            <p>Доброго дня, Антоніна Федорівна!</p>
-          </div>
-        </div>
-        <div class="row equal">
+      <main class="col-lg-11 col-10 ms-sm-auto px-md-4">
 
+          <div class="row mb-2 mb-md-0">
+            <p class="w-100 text-center">Доброго дня, Антоніна Федорівна!
+              <img src="images/icon5.png" alt="">
+              <img src="images/user.png" alt="">
+
+            </p>
+          </div>
+      
+        <div class="row equal">
+          <div class="wrap_table">
+          <table class="table table-sm">
+            <thead>
+              <tr>
+                <th scope="col">Прізвище</th>
+                <th scope="col">Телефон</th>
+                <th scope="col">Мережа</th>
+                <th scope="col">Діти</th>
+
+                <th scope="col">Вік</th>
+                <th scope="col">Місто</th>
+                <th scope="col">Статус</th>
+                <th scope="col">Частота порад</th>
+                <th scope="col">Візити</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img src="images/user.png" alt=""> Велицька А. В.</td>
+                <td>+380501234567</td>
+                <td>вайбер</td>
+                <td>2</td>
+                <td>2</td>
+                <td>Миколаїі</td>
+                <td>Активні користувачі</td>
+                <td>Раз в тиждень</td>
+                <td>Раз на 3 місяці</td>
+              </tr>
+ 
+            </tbody>
+          </table>
+        </div>
         </div>
       </main>
     </div>

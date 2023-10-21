@@ -32,5 +32,5 @@ public class UserGroup {
 
   @Type(type = "JSONB")
   @Column(nullable = false, columnDefinition = "JSONB NOT NULL")
-  private List<FilterParameter> parameters;
+  private List<FilterParameter> properties;
 }

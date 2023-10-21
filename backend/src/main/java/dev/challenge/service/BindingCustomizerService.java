@@ -22,7 +22,7 @@ public class BindingCustomizerService {
   public FilterBindings customize() {
     var bindings = new FilterBindings();
 
-    bindings.bind(QUser.user.city).filter((path, filter, values) -> path.in(values));
+    bindings.bind(QUser.user.location).filter((path, filter, values) -> path.in(values));
     bindings.bind(QUser.user.clientType).filter((path, filter, values) -> path.in(values));
     bindings.bind(QUser.user.activityType).filter((path, filter, values) -> path.in(values));
     bindings.bind(QUser.user.adviceFrequency).filter((path, filter, values) -> path.in(values));

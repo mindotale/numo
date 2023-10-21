@@ -11,7 +11,10 @@ import javax.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Tag(name = "groups")
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/groups")
+@RequestMapping("/groups")
 public class UserGroupsController {
 
   private final UserGroupsService userGroupsService;
@@ -35,9 +38,26 @@ public class UserGroupsController {
     return userGroupsService.createUserGroup(userGroup);
   }
 
+  @Operation(summary = "Get user group by ID")
+  @GetMapping("/{groupId}")
+  public UserGroupDto getUserGroupById(@PathVariable Long groupId) {
+    log.info("Getting user group by ID: {}", groupId);
+    return userGroupsService.getUserGroupById(groupId);
+  }
+
+  @Operation(summary = "Update user group")
+  @PutMapping("/{groupId}")
+  public UserGroupDto updateUserGroup(
+      @Parameter(description = "User group parameters", required = true) @Valid @RequestBody
+          UserGroupDto userGroup,
+      @PathVariable Long groupId) {
+    log.info("Creating new user group with parameters: {}", userGroup);
+    return userGroupsService.updateUserGroup(groupId, userGroup);
+  }
+
   @Operation(summary = "Get user groups")
-  @PostMapping("/search")
-  public SearchResponse<UserGroupDto> getUserGroups(@Valid @RequestBody SearchRequest request) {
+  @GetMapping
+  public SearchResponse<UserGroupDto> getUserGroups(@Valid SearchRequest request) {
     log.info("Searching user groups by parameters: {}", request);
     return userGroupsService.getUserGroups(request);
   }

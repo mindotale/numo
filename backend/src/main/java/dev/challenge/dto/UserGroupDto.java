@@ -21,5 +21,8 @@ public class UserGroupDto {
 
   @NotBlank private String name;
 
-  @NotEmpty @Valid private List<FilterParameter> parameters;
+  @JsonProperty(access = Access.READ_ONLY)
+  private Long count;
+
+  @NotEmpty @Valid private List<FilterParameter> properties;
 }

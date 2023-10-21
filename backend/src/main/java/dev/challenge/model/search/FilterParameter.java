@@ -11,7 +11,7 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 public class FilterParameter {
 
-  @NotEmpty private String property;
-  @NotNull private FilterType type;
+  @NotEmpty private String name;
+  @NotNull private FilterType operator;
   @NotEmpty private List<String> values;
 }

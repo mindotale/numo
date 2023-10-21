@@ -14,7 +14,7 @@ public class UserDto {
   private Long id;
   private String name;
   private String phone;
-  private String city;
+  private String location;
   private Integer age;
   private LocalDate birthDate;
   private ClientType clientType;

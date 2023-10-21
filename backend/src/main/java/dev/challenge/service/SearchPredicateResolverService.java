@@ -31,12 +31,12 @@ public class SearchPredicateResolverService {
             filter -> {
               var binding =
                   bindings
-                      .getBindingForProperty(filter.getProperty())
+                      .getBindingForProperty(filter.getName())
                       .orElseThrow(
                           () ->
                               new ResponseStatusException(
                                   HttpStatus.BAD_REQUEST,
-                                  "Filtering not allowed by property: " + filter.getProperty()));
+                                  "Filtering not allowed by property: " + filter.getName()));
 
               predicate.and(invokeBinding(binding, filter));
             });
@@ -52,6 +52,6 @@ public class SearchPredicateResolverService {
             ? typeConverterService.convert(rawValues, binding.getPath())
             : rawValues;
 
-    return binding.bind(filter.getType(), values);
+    return binding.bind(filter.getOperator(), values);
   }
 }

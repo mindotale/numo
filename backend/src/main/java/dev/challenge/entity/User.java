@@ -36,7 +36,7 @@ public class User {
   private String name;
 
   @Column(nullable = false)
-  private String city;
+  private String location;
 
   @Column(nullable = false)
   private String phone;

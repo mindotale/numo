@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   postgres:
-    image: 'postgres:10.5-alpine'
+    image: 'postgres:14-alpine'
     container_name: postgres
     env_file:
       - data/.env
@@ -40,6 +40,18 @@ services:
       - dev_challenge
     ports:
       - "8080:8080"
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: frontend
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - dev_challenge
+    ports:
+      - "8000:8080"
 
   test:
     build:

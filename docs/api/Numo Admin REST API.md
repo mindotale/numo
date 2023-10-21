@@ -68,29 +68,29 @@
 **Response**
 ```javascript
 {
-    "items": [
-        {
-            "id": "00000000-0000-0000-0000-000000000000",
-            "name": "string",
-            "count":  0,
-            "properties": [
-                {
-                    "name": "string",
-                    "operator": "string"
-                    "value": "string"
-                },
-            ]
-        }
-    ],
-    "pagination": {
-        "page": 0,
-        "pageSize": 0,
-        "totalItems": 0,
-        "totalPages": 0,
-        "first": 0,
-        "last": 0,
-        "prev": 0,
-        "next": 0
+    "result": {
+      "content": [
+            {
+                "id": "00000000-0000-0000-0000-000000000000",
+                "name": "string",
+                "count":  0,
+                "properties": [
+                    {
+                        "name": "string",
+                        "operator": "string"
+                        "value": "string"
+                    },
+                ]
+            }
+        ],
+        "pageable": {
+          "pageSize": 100,
+          "pageNumber": 0,
+        },
+        "totalElements": 10000,
+        "totalPages": 100,
+        "last": false,
+        "first": true,
     }
 }
 ```
@@ -109,7 +109,7 @@
         {
             "name": "string",
             "operator": "string"
-            "value": "string"
+            "values": ["string"]
         },
     ]
 }
@@ -127,7 +127,7 @@
         {
             "name": "string",
             "operator": "string",
-            "value": "string"
+            "values": ["string"]
         },
     ]
 }
@@ -143,7 +143,7 @@
         {
             "name": "string",
             "operator": "string",
-            "value": "string"
+            "values": ["string"]
         },
     ]
 }
@@ -161,7 +161,7 @@
         {
             "name": "string",
             "operator": "string",
-            "value": "string"
+            "values": ["string"]
         },
     ]
 }
@@ -177,7 +177,7 @@
         {
             "name": "string",
             "operator": "string",
-            "value": "string"
+            "values": ["string"]
         }
     ]
 }

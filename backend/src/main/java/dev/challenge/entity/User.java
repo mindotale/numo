@@ -1,16 +1,11 @@
 package dev.challenge.entity;
 
-import dev.challenge.enums.ActivityType;
-import dev.challenge.enums.AdviceFrequency;
-import dev.challenge.enums.ClientType;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -44,17 +39,8 @@ public class User {
   @Column(nullable = false)
   private LocalDate birthDate;
 
-  @Enumerated(EnumType.STRING)
-  private ClientType clientType;
-
-  @Enumerated(EnumType.STRING)
-  private ActivityType activityType;
-
   @Column(nullable = false)
-  private LocalDate lastActivityDate;
-
-  @Enumerated(EnumType.STRING)
-  private AdviceFrequency adviceFrequency;
+  private String source;
 
   @OneToMany(
       mappedBy = "parent",

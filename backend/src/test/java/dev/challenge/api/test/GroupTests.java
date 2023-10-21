@@ -7,9 +7,9 @@ import org.junit.jupiter.api.Assertions;
 
 public class GroupTests {
 
-    // @Test
-    public void shouldGetGroups() {
-        Response response = GroupEndpoints.getGroups();
-        Assertions.assertEquals(response.getContentType(), ContentType.JSON.toString());
-    }
+  // @Test
+  public void shouldGetGroups() {
+    Response response = GroupEndpoints.getGroups();
+    Assertions.assertEquals(response.getContentType(), ContentType.JSON.toString());
+  }
 }

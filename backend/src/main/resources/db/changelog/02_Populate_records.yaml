@@ -6,13 +6,7 @@ databaseChangeLog:
         - sql:
             sql: |
               CREATE TEMP TABLE ClientType (name TEXT);
-              INSERT INTO ClientType (name) VALUES('TELEGRAM'), ('VIBER');
-              
-              CREATE TEMP TABLE AdviceFrequency  (name TEXT);
-              INSERT INTO AdviceFrequency (name) VALUES('DAILY'), ('WEEKLY'), ('MONTHLY');
-              
-              CREATE TEMP TABLE ActivityType  (name TEXT);
-              INSERT INTO ActivityType (name) VALUES('ACTIVE_USER'), ('UNSATISFIED_USER'), ('INCOMPLETE_PROFILE');
+              INSERT INTO ClientType (name) VALUES('Телеграм'), ('Вайбер');
               
               CREATE TEMP TABLE BirthDate  (name TEXT);
               INSERT INTO BirthDate (name)
@@ -37,21 +31,17 @@ databaseChangeLog:
                   RandomName TEXT;
                   RandomCity TEXT;
                   RandomClient TEXT;
-                  RandomActivityType TEXT;
-                  RandomAdviceFrequency TEXT;
                   RandomBirthDate DATE;
                 BEGIN
                   WHILE UserId <= 100 LOOP
                     SELECT name FROM UserNames ORDER BY RANDOM() INTO RandomName;
                     SELECT city FROM Cities ORDER BY RANDOM() INTO RandomCity;
                     SELECT name FROM ClientType ORDER BY RANDOM() INTO RandomClient;
-                    SELECT name FROM ActivityType ORDER BY RANDOM() INTO RandomActivityType;
-                    SELECT name FROM AdviceFrequency ORDER BY RANDOM() INTO RandomAdviceFrequency;
                     SELECT name::DATE FROM BirthDate ORDER BY RANDOM() INTO RandomBirthDate;
                     
-                    INSERT INTO users (name, location, phone, birth_date, client_type, activity_type, last_activity_date, advice_frequency)
+                    INSERT INTO users (name, location, phone, birth_date, source, last_activity_date)
                     VALUES
-                      (RandomName, RandomCity, ''123456789'' || UserId::TEXT, RandomBirthDate, RandomClient, RandomActivityType, ''2023-10-21''::DATE - UserId * INTERVAL ''1 DAY'', RandomAdviceFrequency);
+                      (RandomName, RandomCity, ''123456789'' || UserId::TEXT, RandomBirthDate, RandomClient, ''2023-10-21''::DATE - UserId * INTERVAL ''1 DAY'');
                   
                     UserId := UserId + 1;
                   END LOOP;

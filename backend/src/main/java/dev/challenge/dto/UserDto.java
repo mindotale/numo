@@ -1,8 +1,5 @@
 package dev.challenge.dto;
 
-import dev.challenge.enums.ActivityType;
-import dev.challenge.enums.AdviceFrequency;
-import dev.challenge.enums.ClientType;
 import java.time.LocalDate;
 import lombok.Data;
 import lombok.experimental.Accessors;
@@ -15,9 +12,7 @@ public class UserDto {
   private String name;
   private String phone;
   private String location;
+  private String source;
   private Integer age;
   private LocalDate birthDate;
-  private ClientType clientType;
-  private ActivityType activityType;
-  private AdviceFrequency adviceFrequency;
 }

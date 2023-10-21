@@ -12,7 +12,6 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 public class SearchRequest {
 
-  @Valid private List<FilterParameter> filter;
   @Valid private List<OrderClause> order;
 
   @Min(0)

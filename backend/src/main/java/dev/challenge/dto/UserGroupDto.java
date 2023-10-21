@@ -2,11 +2,10 @@ package dev.challenge.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
-import dev.challenge.model.search.FilterParameter;
+import java.util.ArrayList;
 import java.util.List;
-import javax.validation.Valid;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
 import lombok.Data;
 import lombok.experimental.Accessors;
 import lombok.experimental.FieldNameConstants;
@@ -24,5 +23,18 @@ public class UserGroupDto {
   @JsonProperty(access = Access.READ_ONLY)
   private Long count;
 
-  @NotEmpty @Valid private List<FilterParameter> properties;
+  @Min(0)
+  private Integer minAge;
+
+  @Min(0)
+  private Integer maxAge;
+
+  @Min(0)
+  private Integer minChildCount;
+
+  @Min(0)
+  private Integer maxChildCount;
+
+  private List<String> locations = new ArrayList<>();
+  private List<String> sources = new ArrayList<>();
 }

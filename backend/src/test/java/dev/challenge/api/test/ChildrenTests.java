@@ -7,9 +7,9 @@ import org.junit.jupiter.api.Assertions;
 
 public class ChildrenTests {
 
-    // @Test
-    public void shouldGetChildren() {
-        Response response = ChildrenEndpoints.getChildren();
-        Assertions.assertEquals(response.getContentType(), ContentType.JSON.toString());
-    }
+  // @Test
+  public void shouldGetChildren() {
+    Response response = ChildrenEndpoints.getChildren();
+    Assertions.assertEquals(response.getContentType(), ContentType.JSON.toString());
+  }
 }

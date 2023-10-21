@@ -1,7 +1,7 @@
 package dev.challenge.entity;
 
 import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
-import dev.challenge.model.search.FilterParameter;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -30,7 +30,16 @@ public class UserGroup {
   @Column(nullable = false)
   private String name;
 
+  private Integer minAge;
+  private Integer maxAge;
+  private Integer minChildCount;
+  private Integer maxChildCount;
+
   @Type(type = "JSONB")
   @Column(nullable = false, columnDefinition = "JSONB NOT NULL")
-  private List<FilterParameter> properties;
+  private List<String> locations = new ArrayList<>();
+
+  @Type(type = "JSONB")
+  @Column(nullable = false, columnDefinition = "JSONB NOT NULL")
+  private List<String> sources = new ArrayList<>();
 }

@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,9 +17,8 @@
   <div class="container mt-5">
     <div class="row">
       <div class="sidebar col-lg-1 col-2 p-0 bg-body-tertiary">
-        <div class="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+      
 
-          <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
             <ul class="nav flex-column">
               <li class="nav-item">
                 <a class="nav-link d-flex align-items-center gap-2" href="#">
@@ -41,9 +41,7 @@
                 </a>
               </li>
             </ul>
-
-          </div>
-        </div>
+      
       </div>
   
       <main class="col-lg-11 col-10 ms-sm-auto px-md-4">
@@ -59,12 +57,48 @@
         <div class="row equal">
           <div class="wrap_table row m-3">
             <h3>Список груп</h3>
-          <div class="col-12 wpap_filters">
-            <select>
-              
-            </select>
+          <div class="row pt-3 pb-3 w-100 wpap_filters">
+            <div class="col-2">        
+              <select class="form-select" aria-label="Default select example">
+              <option selected>Мін.-макс. вік</option>
+              <option value="1">2</option>
+              <option value="2">3</option>
+              <option value="3">4</option>
+              <option value="3">5</option>
+              <option value="3">6</option>
+            </select></div>
+    
+            <div class="col-2">        
+              <select class="form-select" aria-label="Default select example">
+              <option selected>Мін.-макс. вік</option>
+              <option value="1">2</option>
+              <option value="2">3</option>
+              <option value="3">4</option>
+              <option value="3">5</option>
+              <option value="3">6</option>
+            </select></div>
+            <div class="col-2">        
+              <select class="form-select" aria-label="Default select example">
+              <option selected>Мін.-макс. вік</option>
+              <option value="1">2</option>
+              <option value="2">3</option>
+              <option value="3">4</option>
+              <option value="3">5</option>
+              <option value="3">6</option>
+            </select></div>
+            <div class="col-2">        
+              <select class="form-select" aria-label="Default select example">
+              <option selected>Мін.-макс. вік</option>
+              <option value="1">2</option>
+              <option value="2">3</option>
+              <option value="3">4</option>
+              <option value="3">5</option>
+              <option value="3">6</option>
+            </select></div>
+            <div class="col-2"><a href="#">Очистити х</a></div>
+            <div class="col-2"><button class="btn">Видалити</button></div>
           </div>
-          <table class="table table-sm">
+          <table class="table table-borderless table-sm">
             <thead>
               <tr>
                 <th scope="col">Прізвище</th>
@@ -91,7 +125,28 @@
                 <td>Раз в тиждень</td>
                 <td>Раз на 3 місяці</td>
               </tr>
- 
+              <tr>
+                <td><img src="images/user.png" alt=""> Велицька А. В.</td>
+                <td>+380501234567</td>
+                <td>вайбер</td>
+                <td>2</td>
+                <td>2</td>
+                <td>Миколаїі</td>
+                <td>Активні користувачі</td>
+                <td>Раз в тиждень</td>
+                <td>Раз на 3 місяці</td>
+              </tr>
+              <tr>
+                <td><img src="images/user.png" alt=""> Велицька А. В.</td>
+                <td>+380501234567</td>
+                <td>вайбер</td>
+                <td>2</td>
+                <td>2</td>
+                <td>Миколаїі</td>
+                <td>Активні користувачі</td>
+                <td>Раз в тиждень</td>
+                <td>Раз на 3 місяці</td>
+              </tr>
             </tbody>
           </table>
         </div>
